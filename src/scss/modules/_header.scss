@@ -32,9 +32,15 @@
   &__logo {
     position: absolute;
     top: 0;
-    width: 1em;
-    height: 1em;
-    font-size: 60px;
+    //width: 1em;
+    //height: 1em;
+    font-size: rem(20);
+  }
+
+  &__logo-text {
+    position: relative;
+    top: 20px;
+    color: $color-white;
   }
 
   /**

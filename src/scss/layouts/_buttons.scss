@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: rem(10) rem(20);
+  font-size: rem(16);
   color: $color-white;
   background-color: $color-primary;
   text-decoration: none;
@@ -28,8 +28,8 @@
   }
 
   &--large {
-    padding: 15px 25px;
-    font-size: 18px;
+    padding: rem(15) rem(25);
+    font-size: rem(18);
   }
 
 }

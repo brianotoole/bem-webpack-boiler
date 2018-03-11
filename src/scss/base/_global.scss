@@ -28,11 +28,25 @@ img {
 .page-section {
   padding-top: 30px;
   padding-bottom: 30px;
-  height: 2000px; //testing only
   
   &--primary {
     color: white;
     background-color: $color-primary;
+  }
+
+  &--secondary {
+    color: white;
+    background-color: $color-secondary;
+  }
+
+  &--white {
+    color: black;
+    background-color: $color-white;
+  }
+
+  &--black {
+    color: white;
+    background-color: black;
   }
 
 }
