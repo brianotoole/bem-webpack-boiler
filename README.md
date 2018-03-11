@@ -50,4 +50,4 @@ To lazyload images, add the class `.lazyload` to all `img` and `iframe` elements
 ### TODO
 - [ ] Add modernizr / setup basic fallback classes for IE9
 - [ ] Add url-loader / setup local images/font paths
-- [ ] Add production build script: on run-script 'build prod', compile images + min assets
+- [ ] Add production build script: on run-script 'build prod', compress images + min assets
