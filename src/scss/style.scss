@@ -1,3 +1,15 @@
-body {
-  background: red;
-}
+/**
+  * MAIN STYLES ENTRY POINT
+  */
+
+/* Base */
+@import "base/reset";
+@import "base/variables";
+@import "base/mixins";
+@import "base/global";
+
+/* Layouts */
+@import "layouts/buttons";
+@import "layouts/grid";
+
+/* Modules */
