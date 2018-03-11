@@ -5,28 +5,51 @@
 
 /**
   * MEDIA QUERIES MIXIN
-
+  * MOBILE FIRST APPROACH
+  * DEFAULT RULES SET FOR MOBILE
+  * USAGE: 
+    @include bp_md {
+      width: 500px;
+    }
   */
-@define-mixin bp_sm {
-  @media (min-width: 530px) {
-    @mixin-content;
+
+$bp_sm: 530px;
+$bp_md: 800px;
+$bp_lg: 999px;
+
+// above bp_sm
+@mixin bp_sm {
+  @media (min-width: #{$bp_sm}) {
+    @content;
   }
 }
 
-@define-mixin bp_md {
-  @media (min-width: 800px) {
-    @mixin-content;
+// above bp_md
+@mixin bp_md {
+  @media (min-width: #{$bp_md}) {
+    @content;
   }
 }
 
-@define-mixin bp_lg {
-  @media (min-width: 999px) {
-    @mixin-content;
+// above bp_lg
+@mixin bp_lg {
+  @media (min-width: #{$bp_lg}) {
+    @content;
   }
 }
 
-@define-mixin bp_xl {
-  @media (min-width: 1200px) {
-    @mixin-content;
+/**
+  * PX TO REM CONVERSION
+  * USAGE:
+  * .class {font-size: rem(20)};
+  */
+$baseFontSize : 16; 
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
   }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
 }

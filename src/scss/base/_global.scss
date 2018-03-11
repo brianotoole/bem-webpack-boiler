@@ -1,0 +1,38 @@
+/**
+  * GLOBAL PAGE STYLES
+  */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+
+  &--medium {
+    max-width: 976px;
+  }
+
+}
+
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 2000px; //testing only
+  
+  &--primary {
+    color: white;
+    background-color: $color-primary;
+  }
+
+}
