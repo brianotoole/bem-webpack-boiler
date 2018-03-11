@@ -53,3 +53,27 @@ $baseFontSize : 16;
   }
   @return $pixels / $context * 1rem;
 }
+
+/**
+  * CLEARFIX
+  * USAGE:
+  * @include clearFix();
+  */
+@mixin clearFix() {
+  &:before,
+  &:after{
+    content: " "; 
+    display: table; 
+  }
+
+  &:after{
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+  &{
+    *zoom: 1;
+  }
+}
