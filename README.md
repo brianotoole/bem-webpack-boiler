@@ -24,17 +24,18 @@ npm run-script watch
 ```
 
 ### Packages Included
-1. [Autoprefixer](https://www.npmjs.com/package/autoprefixer) 
+1. [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
 will use the data based on current browser popularity and property support to automatically apply prefixes. This requires the [postcss-loader](https://github.com/postcss/postcss-loader) loader to be installed & used within `webpack.config.js` file. This is already setup and includes the `postcss.config` file needed to work. See the postcss-loader [documentation](https://github.com/postcss/postcss-loader) for dealing with browser support / options.
 
 
-2. [babel-core](https://github.com/babel/babel-loader) and [babel-loader](https://github.com/babel/babel-loader) are used with the [Babel-Preset-ES2015](https://www.npmjs.com/package/babel-preset-es2015-webpack) preset. This preset is used to enable code to be written in ES2015 (ES6) and compiled for browser support down to ES5.
+2. Babel: [babel-core](https://github.com/babel/babel-loader) and [babel-loader](https://github.com/babel/babel-loader) are used with the [Babel-Preset-ES2015](https://www.npmjs.com/package/babel-preset-es2015-webpack) preset. This preset is used to enable code to be written in ES2015 (ES6) and compiled for browser support down to ES5.
 
-3. [BrowserSync](https://www.npmjs.com/package/browser-sync-webpack-plugin) This boiler is using BrowserSync to serve the project and Webpack Dev Server is not needed. The setup is pretty easy: just pass the BrowserSync options to the plugin as the first argument within the `webpack.config.js` file.
+3. [BrowserSync](https://www.npmjs.com/package/browser-sync-webpack-plugin): 
+This boiler is using BrowserSync to serve the project and Webpack Dev Server is not needed. The setup is pretty easy: just pass the BrowserSync options to the plugin as the first argument within the `webpack.config.js` file.
 
 
 ### Dependencies Included
-1. [jQuery](https://www.npmjs.com/package/jquery) is included as dependency, to make it easier to grab DOM elements with ease. You are able to use this within any javascript files by importing jquery into the file, like so:
+1. [jQuery](https://www.npmjs.com/package/jquery) is included as dependency to grab/manipulate DOM elements with ease. You are able to use jQuery within any javascript file, by importing `$ from jquery` into the file, like so:
 ``` javascript 
 import $ from 'jquery'; 
 ```
