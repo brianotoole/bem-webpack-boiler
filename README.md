@@ -40,7 +40,7 @@ This boiler is using BrowserSync to serve the project and Webpack Dev Server is 
 import $ from 'jquery'; 
 ```
 
-2. [Lazysizes](https://www.npmjs.com/package/lazysizes) is similar to Lazyload. It is a self-initializing lazyloader for images and is said to be better for SEO, since lazysizes does not hide images/assets from search engines... No matter what markup pattern you use. This package is included as a dependency. 
+2. [Lazysizes](https://www.npmjs.com/package/lazysizes) is similar to Lazyload. It is a self-initializing lazyloader for images and still works fine for SEO, since it does not hide images/assets from search engines... No matter what markup pattern you use. This package is included as a dependency. 
 
 To lazyload images, add the class `.lazyload` to all `img` and `iframe` elements, as needed. Instead of a `src` or `srcset` attribute **use a `data-src` or `data-srcset` attribute**. Here's an example:
 ``` html
