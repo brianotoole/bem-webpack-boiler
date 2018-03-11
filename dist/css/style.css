@@ -55,26 +55,79 @@ h1, h2, h3, h4, h5, h6 {
   */
 /**
   * MEDIA QUERIES MIXIN
-
+  * MOBILE FIRST APPROACH
+  * DEFAULT RULES SET FOR MOBILE
+  * USAGE: 
+    @include bp_md {
+      width: 500px;
+    }
   */
-@define-mixin bp_sm {
-  @media (min-width: 530px) {
-    @mixin-content; } }
+/**
+  * PX TO REM CONVERSION
+  * USAGE:
+  * .class {font-size: rem(20)};
+  */
+/**
+  * GLOBAL PAGE STYLES
+  */
+* {
+  box-sizing: border-box; }
 
-@define-mixin bp_md {
-  @media (min-width: 800px) {
-    @mixin-content; } }
+body {
+  background: #fff; }
 
-@define-mixin bp_lg {
-  @media (min-width: 999px) {
-    @mixin-content; } }
+img {
+  width: 100%;
+  height: auto; }
 
-@define-mixin bp_xl {
-  @media (min-width: 1200px) {
-    @mixin-content; } }
+.wrapper {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden; }
+  .wrapper--medium {
+    max-width: 976px; }
+
+.page-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 2000px; }
+  .page-section--primary {
+    color: white;
+    background-color: #0c5993; }
 
 /* Layouts */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0c5993;
+  text-decoration: none;
+  transition: all 0.2s linear; }
+  .btn:hover, .btn:focus {
+    background-color: #083c64; }
+  .btn--secondary {
+    background-color: #5bb6eb; }
+    .btn--secondary:hover, .btn--secondary:focus {
+      background-color: #2ea2e5; }
+  .btn--transparent {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #0c5993; }
+    .btn--transparent:hover, .btn--transparent:focus {
+      background-color: #0c5993;
+      border-color: #083c64; }
+  .btn--large {
+    padding: 15px 25px;
+    font-size: 18px; }
+
 /* Modules */
+/**
+  * HEADER
+  */
 .header {
   position: absolute;
   width: 100%;
@@ -82,10 +135,28 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
   background-color: #0c5993;
   z-index: 2;
-  transition: all 0.4s ease-out; }
+  transition: all 0.4s ease-out;
+  /**
+  * CONTAINER FOR MENU'S CONTENT
+  */
+  /**
+  * MOBILE MENU ICON
+  * THE "HAMBURGER" 
+  */
+  /**
+  * MOBILE NAV ICON CLOSED
+  * THE "X"
+  */ }
+  @media (min-width: 800px) {
+    .header--is-fixed {
+      position: fixed;
+      background-color: #042035; } }
   .header--is-open {
     height: 100vh;
     background-color: #042035; }
+  @media (min-width: 800px) {
+    .header__btn-container {
+      float: right; } }
   .header__logo {
     position: absolute;
     top: 0;
@@ -100,6 +171,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding-top: 90px;
     transition: all 0.2s ease-out; }
+    @media (min-width: 800px) {
+      .header__menu-content {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        visibility: visible;
+        padding: 0; } }
     .header__menu-content--is-open {
       opacity: 1;
       -webkit-transform: scale(1);
@@ -150,6 +228,9 @@ h1, h2, h3, h4, h5, h6 {
       transition: -webkit-transform 0.3s ease-out;
       transition: transform 0.3s ease-out;
       transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+    @media (min-width: 800px) {
+      .header__menu-icon {
+        display: none; } }
   .header__menu-icon--close:before {
     content: '';
     -webkit-transform: rotate(45deg) scaleX(1.25);
@@ -163,6 +244,13 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
             transform: rotate(-45deg) scaleX(1.25) translateY(1px); }
 
+/**
+  * NAV PRIMARY
+  */
+@media (min-width: 800px) {
+  .nav-primary--pull-right {
+    float: right; } }
+
 .nav-primary ul {
   margin: 0;
   padding: 0; }
@@ -172,6 +260,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-primary li {
   list-style-type: none; }
+  @media (min-width: 800px) {
+    .nav-primary li {
+      float: left;
+      padding-right: 20px; } }
 
 .nav-primary a {
   display: inline-block;
@@ -181,3 +273,35 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   padding: 10px 8px;
   width: 100%; }
+  @media (min-width: 800px) {
+    .nav-primary a {
+      padding: 12px 0; } }
+
+.hero {
+  position: relative;
+  height: 500px; }
+  .hero__image {
+    height: 100%; }
+  .hero__content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center; }
+  .hero__title {
+    font-weight: 300;
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0; }
+    @media (min-width: 800px) {
+      .hero__title {
+        font-size: 60px; } }
+  .hero__subtitle {
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0; }
+    @media (min-width: 800px) {
+      .hero__subtitle {
+        font-size: 30px; } }
