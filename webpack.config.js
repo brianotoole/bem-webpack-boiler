@@ -24,14 +24,6 @@ module.exports = {
         },
         test: /\.js$/,
         exclude: /node_modules/
-      },
-      { //URL LOADER FOR IMAGE/FONT FILES
-        test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-        loader: 'url-loader',
-        options: {
-          // Images larger than 10 KB won’t be inlined
-          limit: 10 * 1024
-        }
       }
     ]
   },
