@@ -88,6 +88,10 @@ var _MobileMenu = __webpack_require__(3);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
+var _Modal = __webpack_require__(5);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -98,6 +102,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 __webpack_require__(0);
 
 var mobileMenu = new _MobileMenu2.default();
+var modal = new _Modal2.default();
 
 /***/ }),
 /* 3 */
@@ -10521,6 +10526,76 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
+
+var _jquery = __webpack_require__(4);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.modalTrigger = (0, _jquery2.default)('.js-modal-trigger');
+    this.modal = (0, _jquery2.default)('.modal');
+    this.modalClose = (0, _jquery2.default)('.modal__close');
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: 'events',
+    value: function events() {
+      // click on open modal
+      this.modalTrigger.click(this.openModal.bind(this)); //bind 'this' keyword to what it is set to
+
+      // click on x close btn
+      this.modalClose.click(this.closeModal.bind(this));
+
+      // keyup event
+      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+    }
+  }, {
+    key: 'keyPressHandler',
+    value: function keyPressHandler(e) {
+      if (e.keyCode == 27) {
+        this.closeModal();
+      }
+    }
+  }, {
+    key: 'openModal',
+    value: function openModal() {
+      this.modal.addClass('modal--is-open');
+      return false; //prevent default behavior of link click
+    }
+  }, {
+    key: 'closeModal',
+    value: function closeModal() {
+      this.modal.removeClass('modal--is-open');
+    }
+  }]);
+
+  return Modal;
+}(); //Modal
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);

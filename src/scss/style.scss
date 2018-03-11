@@ -11,7 +11,9 @@
 /* Layouts */
 @import "layouts/buttons";
 @import "layouts/grid";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/hero";
 
 /* Modules */
-@import "modules/header";
-@import "modules/hero";
+@import "modules/modal";
