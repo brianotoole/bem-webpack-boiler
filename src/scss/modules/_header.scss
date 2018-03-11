@@ -1,0 +1,161 @@
+.header {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+  background-color: $color-primary;
+  z-index: 2;
+  transition: all 0.4s ease-out;
+
+  &--is-fixed {
+    @mixin bp_md {
+      position: fixed;
+      background-color: darken($color-primary, 20%);
+    }
+  }
+
+  &--is-open {
+    height: 100vh;
+    background-color: darken($color-primary, 20%);
+  }
+
+  &__btn-container {
+    @mixin bp_md {
+      float: right;
+    }
+  }
+
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 60px;
+  }
+
+  &__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    visibility: hidden;
+    text-align: center;
+    padding-top: 90px;
+    transition: all 0.2s ease-out;
+    @mixin bp_md {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+      padding: 0;
+    }
+
+    &--is-open {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+    }
+
+  }
+
+  &__menu-icon {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 10;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 0 0;
+      transition: transform 0.3s ease-out;
+    }
+    &__line {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 0 50%;
+      transition: transform 0.3s ease-out;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 0 100%;
+      transition: transform 0.3s ease-out;
+    }
+
+    @mixin bp_md {
+      display: none;
+    }
+
+  }
+
+  &__menu-icon--close {
+    &:before {
+      content: '';
+      transform: rotate(45deg) scaleX(1.25);
+    }
+    .header__menu-icon__line {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    &:after {
+      content: '';
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+    }
+  }
+
+}
+
+.nav-primary {
+
+  &--pull-right {
+    @mixin bp_md {
+      float: right;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    &:after {
+      clear: left;
+      display: table;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    @mixin bp_md {
+      float: left;
+      padding-right: 20px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px 8px;
+    width: 100%;
+    @mixin bp_md {
+      padding: 12px 0;
+    }
+  }
+
+}

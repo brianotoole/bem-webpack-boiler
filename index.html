@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,52 @@
   <title>BEM Webpack Boilerplate</title>
   <link rel="stylesheet" href="./dist/css/style.css">
 </head>
+
 <body>
+
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__logo">
+        <img src="assets/images/logo.svg" rel="logo">
+      </div>
+
+      <div class="header__menu-icon">
+        <div class="header__menu-icon__line"></div>
+      </div>
+      <div class="header__menu-content">
+        <div class="header__btn-container">
+          <a href="" class="btn btn--secondary">Get in Touch</a>
+        </div>
+        <nav class="nav-primary nav-primary--pull-right">
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">This is a Cool Hero Title</h1>
+      <h5 class="hero__subtitle">This is the subtitle</h5>
+      <div class="hero__btn-container">
+        <a href="#" class="btn--primary">I'm a Button</a>
+      </div>
+    </div>
+  </section>
 
 
   <script src="./dist/js/bundle.js"></script>
-  
+
 </body>
+
 </html>

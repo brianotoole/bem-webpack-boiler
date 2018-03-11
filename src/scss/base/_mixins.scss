@@ -1,0 +1,32 @@
+/**
+  * MIXINS
+  */
+
+
+/**
+  * MEDIA QUERIES MIXIN
+
+  */
+@define-mixin bp_sm {
+  @media (min-width: 530px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin bp_md {
+  @media (min-width: 800px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin bp_lg {
+  @media (min-width: 999px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin bp_xl {
+  @media (min-width: 1200px) {
+    @mixin-content;
+  }
+}
