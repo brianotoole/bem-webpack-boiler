@@ -20,6 +20,7 @@
   &--is-open {
     height: 100vh;
     background-color: darken($color-primary, 20%);
+    z-index: 20;
   }
 
   &__btn-container {
@@ -53,7 +54,7 @@
     visibility: hidden;
     text-align: center;
     padding-top: 90px;
-    transition: all 0.2s ease-out;
+    transition: all 0.3s ease-out;
     @include bp_md {
       opacity: 1;
       transform: scale(1);
@@ -74,8 +75,10 @@
   * THE "HAMBURGER" 
   */
 
+  $m_icon_width: 20px;
+
   &__menu-icon {
-    width: 20px;
+    width: $m_icon_width;
     height: 19px;
     position: absolute;
     top: 20px;
@@ -87,7 +90,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 20px;
+      width: $m_icon_width;
       height: 3px;
       background-color: white;
       transform-origin: 0 0;
@@ -97,7 +100,7 @@
       position: absolute;
       top: 8px;
       left: 0;
-      width: 20px;
+      width: $m_icon_width;
       height: 3px;
       background-color: white;
       transform-origin: 0 50%;
@@ -108,7 +111,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 20px;
+      width: $m_icon_width;
       height: 3px;
       background-color: white;
       transform-origin: 0 100%;

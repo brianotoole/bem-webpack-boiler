@@ -213,7 +213,8 @@ img {
       background-color: #042035; } }
   .header--is-open {
     height: 100vh;
-    background-color: #042035; }
+    background-color: #042035;
+    z-index: 20; }
   @media (min-width: 800px) {
     .header__btn-container {
       float: right; } }
@@ -232,7 +233,7 @@ img {
     visibility: hidden;
     text-align: center;
     padding-top: 90px;
-    transition: all 0.2s ease-out; }
+    transition: all 0.3s ease-out; }
     @media (min-width: 800px) {
       .header__menu-content {
         opacity: 1;
