@@ -2,9 +2,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/js/index.js', './src/scss/style.scss'],
+  entry: {
+    app: './src/js/index.js',
+    vendor: './src/js/vendor.js'
+  },
   output: {
-    filename: 'dist/js/bundle.js'
+    filename: 'dist/js/[name].js'
   },
   module: {
     rules: [

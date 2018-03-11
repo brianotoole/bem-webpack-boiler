@@ -1,5 +1,5 @@
 /**
-  * MAIN SCRIPTS ENTRY POINT
+  * MAIN APP SCRIPTS ENTRY POINT
   */
 
 // extract text from webpack to bundled output file

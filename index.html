@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BEM Webpack Boilerplate</title>
   <link rel="stylesheet" href="./dist/css/style.css">
+  <script src="./dist/js/vendor.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
   </header>
 
   <section class="hero hero--has-overlay">
-    <img class="hero__image" src="https://images.unsplash.com/photo-1495815571604-8f4858cd8767?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60db5dae2d282b6f565e4dfc1e30bdfc&auto=format&fit=crop&w=1791&q=80">
+    <img class="hero__image lazyload" data-src="https://images.unsplash.com/photo-1495815571604-8f4858cd8767?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60db5dae2d282b6f565e4dfc1e30bdfc&auto=format&fit=crop&w=1791&q=80">
     <div class="hero__content">
       <h1 class="hero__title">This is a Cool Hero Title</h1>
       <h5 class="hero__subtitle">This is the subtitle</h5>
@@ -112,8 +113,9 @@
         <div class="modal__close">X</div>
       </div><!--/.modal-->
 
+      <img class="hero__image lazyload" data-src="https://images.unsplash.com/photo-1520715201072-c02a4aecd012?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=88a5da0dfe0a9d95647e900137864162&auto=format&fit=crop&w=800&q=60">
 
-  <script src="./dist/js/bundle.js"></script>
+  <script src="./dist/js/app.js"></script>
 
 </body>
 
