@@ -1,5 +1,5 @@
 # BEM Webpack Boiler
-A minimalistic boilerplate that follows BEM methodology and organizes assets using an SMACSS approach. It comes with Webpack that includes BrowserSync for auto reloading / proxing a server and Babel for writing ES6-based javascript modules. JQuery is also included.
+A minimalistic boilerplate that follows BEM methodology and organizes assets using an SMACSS approach. It comes with Webpack that includes BrowserSync for auto reloading / proxing a server, Babel for writing ES6-based javascript modules, Autoprefixer for cross-browser compatibility, and uses SCSS as the main loader for styles.
 
 ## Getting Started: Installing
 
