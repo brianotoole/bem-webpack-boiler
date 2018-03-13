@@ -23,6 +23,12 @@ This will open up a browser window with local site and watch for file changes. E
 npm run-script watch
 ```
 
+### Build files for production
+When you're ready to minify production files, run the following in the site's root:
+`npm run-script prod`
+
+This will run webpack's production build flag, `-p` to minify bundled files.
+
 ### Packages Included
 1. [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
 will use the data based on current browser popularity and property support to automatically apply prefixes. This requires the [postcss-loader](https://github.com/postcss/postcss-loader) loader to be installed & used within `webpack.config.js` file. This is already setup and includes the `postcss.config` file needed to work. See the postcss-loader [documentation](https://github.com/postcss/postcss-loader) for dealing with browser support / options.
@@ -50,4 +56,4 @@ To lazyload images, add the class `.lazyload` to all `img` and `iframe` elements
 ### TODO
 - [ ] Add modernizr / setup basic fallback classes for IE9
 - [ ] Add url-loader / setup local images/font paths
-- [ ] Add production build script: on run-script 'build prod', compress images + min assets
+- [ X ] Add production build script: on run-script 'build prod', compress images + min assets
