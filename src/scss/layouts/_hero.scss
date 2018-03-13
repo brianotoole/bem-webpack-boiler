@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 500px;
+  //background: url('../img/bg-brick.png') 0 0 repeat;
 
   &--has-overlay {
     &:after {
@@ -10,9 +11,13 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(black, 0.5);
+      background: rgba($color-secondary, 0.6);
       z-index: 1;
     }
+  }
+
+  &--bg-secondary {
+    background-color: $color-secondary;
   }
 
   &__background-image {
