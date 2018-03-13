@@ -15,8 +15,17 @@
     }
   }
 
-  &__image {
+  &__background-image {
     height: 100%;
+  }
+
+  &__logo { 
+    width: 1em;
+    height: 1em;
+    font-size: 100px;
+    margin: 0 auto;
+    background: url('../img/logo.svg') center center no-repeat;
+    background-size: 100%;
   }
 
   &__content {

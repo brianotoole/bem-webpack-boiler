@@ -7,7 +7,8 @@ module.exports = {
     vendor: './src/js/vendor.js'
   },
   output: {
-    filename: 'dist/js/[name].js'
+    filename: 'dist/js/[name].js',
+    publicPath: '../'
   },
   module: {
     rules: [
@@ -24,7 +25,21 @@ module.exports = {
         },
         test: /\.js$/,
         exclude: /node_modules/
-      }
+      },
+      //{ // URL LOADER
+      //  test: /\.(jpe?g|png|svg)(\?[a-z0-9=.]+)?$/,
+       // loader: 'url-loader?limit=10000&name=[name].[ext]', //if < 10 kb, base64 encode img to css
+      //},
+      { // FILE-LOADER
+        test: /\.woff|woff2|eot|ttf|svg|jpe?g|png/,
+        loader: 'file-loader',
+        options: {
+          name: 'dist/img/[name].[ext]',
+          publicPath: function(url) {
+            return url.replace(/dist/, '..')
+          },
+        },
+      },
     ]
   },
   plugins: [
