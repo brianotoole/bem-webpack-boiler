@@ -36,7 +36,9 @@ This will open up a browser window with local site and watch for file changes. E
 
 ### Build files for production
 When you're ready to minify production files, run the following in the site's root:
-`npm run-script prod`
+``` bash
+npm run-script prod
+```
 
 This will run webpack's production build flag, `-p` to minify bundled files.
 
