@@ -1,68 +1,78 @@
-/**
-  * FLEXBOX GRID
-  */
+/*********************************************************
+    Flexbox Grid
+*********************************************************/
 .row-flex {
   display: flex;
+  width: auto;
+  flex-direction: row;
   flex-wrap: wrap;
   flex: 0 1 auto;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
+  margin-left: -($wrapper-padding/2);
+  margin-right: -($wrapper-padding/2);
 
-  &--gutters {
-    margin-right: -30px;
+  > div { //default grid has padding applied
+    position: relative;
+    padding: 0 1rem 1rem;
+  }
+
+  &--no-gutters { 
+    margin: 0;
     > div {
-      padding-right: 30px;
+      padding: 0;
     }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
   }
 
   @include bp_md {
     &__md-1 {
-      flex-basis: auto;
+      flex-basis: 8.3333333333%;
       width: 8.3333333333%;
     }
     &__md-2 {
-      flex-basis: auto;
+      flex-basis: 16.6666666667%;
       width: 16.6666666667%;
     }
     &__md-3 {
-      flex-basis: auto;
+      flex-basis: 25%;
       width: 25%;
     }
     &__md-4 {
-      flex-basis: auto;
+      flex-basis: 33.3333333333%;
       width: 33.3333333333%;
     }
     &__md-5 {
-      flex-basis: auto;
+      flex-basis: 41.6666666667%;
       width: 41.6666666667%;
     }
     &__md-6 {
-      flex-basis: auto;
+      flex-basis: 50%;
       width: 50%;
     }
     &__md-7 {
-      flex-basis: auto;
+      flex-basis: 58.3333333333%;
       width: 58.3333333333%;
     }
     &__md-8 {
-      flex-basis: auto;
+      flex-basis: 66.6666666667%;
       width: 66.6666666667%;
     }
     &__md-9 {
-      flex-basis: auto;
+      flex-basis: 75%;
       width: 75%;
     }
     &__md-10 {
-      flex-basis: auto;
+      flex-basis: 83.3333333333%;
       width: 83.3333333333%;
     }
     &__md-11 {
-      flex-basis: auto;
+      flex-basis: 91.6666666667%;
       width: 91.6666666667%;
     }
     &__md-12 {
-      flex-basis: auto;
+      flex-basis: 100%;
       width: 100%;
     }
   }
