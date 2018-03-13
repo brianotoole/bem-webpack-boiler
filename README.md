@@ -26,11 +26,10 @@ npm run-script watch
 ### Working with Local Images and Fonts
 Webpack needs a few loaders installed to use local images/fonts within the project's directory. This boilerplate uses `url-loader` to bundle/load images. Url-loader has the ability to load files as base64 encoded DataURL if the file is smaller than a specificied byte limit. This helps reduce the number of requests made. 
 
-
 ##### URL-Loader webpack setup
 The default specificed byte limit on this boilerplate to serve DataURL's on images is 10KB, or 10,000 bytes. There are 2 separate url-loader options to test for. 
 
-1. Test for image files
+**1. Test for image files**
 This is testing for files with `.jpg/.jpeg/.png/.svg` extention types. If the file is less than 10KB, serve this as a DataURL. If greater than 10KB, bundle to the path within `&name`. Or, `./dist/img/[name].[ext]`.
 
 ``` javascript
@@ -40,7 +39,7 @@ This is testing for files with `.jpg/.jpeg/.png/.svg` extention types. If the fi
 },
 ```
 
-2. Test for font files
+**2. Test for font files**
 ``` javascript
 { // URL LOADER, FONTS
   test: /\.(woff|woff2|eot|ttf)/,
@@ -54,8 +53,11 @@ This is testing for files with `.woff/.woff2/.eot/.ttf` extention types. If the 
 Add images within the `./src/img/` folder.
 To use the image within a stylesheet, use the relative path from the main entrypoint file, `./src/index.js`. An example:
 ``` css
-.has--bg {background: url('../img/bg-brick.png') 0 0 repeat; }
+.has--bg { background: url('../img/bg-brick.png') 0 0 repeat; }
 ```
+
+##### File-loader fallback
+If for some reason url-loader isn't your preferred loader, file-loader is installed and setup within webpack.config.js. To use, uncomment the `file-loader` within `webpack.config.js` and comment-out or remove the url-loader instance.
 
 ### Build files for production
 When you're ready to minify production files, run the following in the site's root:
@@ -89,5 +91,5 @@ To lazyload images, add the class `.lazyload` to all `img` and `iframe` elements
 
 ### TODO
 - [ ] Add modernizr / setup basic fallback classes for IE9
-- [ ] Add url-loader / setup local images/font paths
+- [X] Add url-loader / setup local images/font paths
 - [X] Add production build script: on run-script 'build prod', compress images + min assets
