@@ -6,5 +6,9 @@ $color-primary: #c60813;
 $color-secondary: #7c9091;
 $color-white: #ffffff;
 
+$color-primary-dark: darken($color-primary, 15%);
+$color-secondary-dark: darken($color-secondary, 15%);
+$color-white-dark: darken($color-white, 15%);
+
 $font-heading: 'Roboto', sans-serif;
 $font-body: 'Lato', sans-serif;

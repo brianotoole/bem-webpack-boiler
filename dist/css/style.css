@@ -485,8 +485,9 @@ img {
     width: 100%;
     background: rgba(124, 144, 145, 0.6);
     z-index: 1; }
-  .hero--bg-secondary {
-    background-color: #7c9091; }
+  .hero--bg-gradient {
+    background-color: #7c9091;
+    background-image: linear-gradient(120deg, #7c9091, #586869); }
   .hero__background-image {
     height: 100%; }
   .hero__logo {
