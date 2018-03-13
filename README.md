@@ -1,9 +1,23 @@
 # BEM Webpack Boiler
 A minimalistic boilerplate that follows BEM methodology and organizes assets using an SMACSS approach. It comes with Webpack that includes BrowserSync for auto reloading / proxing a server, Babel for writing ES6-based javascript modules, Autoprefixer for cross-browser compatibility, and uses SCSS as the main loader for styles.
 
-## Getting Started: Installing
+## Requirements
+To use everything site-start ships with, you must have the following installed:
 
-### Change Proxy Location
+* NPM
+
+## Installation
+1. Clone the repository & cd into the site's directory
+``` bash
+git clone https://github.com/brianotoole/bem-webpack-boiler.git
+cd bem-webpack-boiler
+```
+
+2. Install npm dependencies
+``` bash
+npm install
+```
+3. Change proxy location for BrowserSync
 Open `webpack.config.js` file and change the proxy location for BrowserSync to work. On ~line 36:
 
 Change proxy location: "localhost/bem-webpack-boiler"
@@ -11,19 +25,17 @@ Change proxy location: "localhost/bem-webpack-boiler"
 proxy: 'localhost/FOLDERNAME', 
 ```
 
-### Install NPM Dependencies
-``` bash
-npm install
-```
-
-### Watch Watch files with BrowserSync
-This will open up a browser window with local site and watch for file changes. Ex - http://localhost:3000/bem-webpack-boiler
+4. Start server
+The boilerplate comes preset with css/js file inclusions, base meta settings, and a basic semantic body with a few modules to get you started. However, to make full use of the site-start though, you'll want to use Webpack.
 
 ``` bash
 npm run-script watch
 ```
 
-### Working with Local Images and Fonts
+This will open up a browser window with local site and watch for file changes. Ex - http://localhost:3000/bem-webpack-boiler
+
+
+### Local Images and Fonts
 Webpack needs a few loaders installed to use local images/fonts within the project's directory. This boilerplate uses `url-loader` to bundle/load images. Url-loader has the ability to load files as base64 encoded DataURL if the file is smaller than a specificied byte limit. This helps reduce the number of requests made. 
 
 ##### URL-Loader webpack setup
@@ -87,7 +99,17 @@ To lazyload images, add the class `.lazyload` to all `img` and `iframe` elements
 <img data-src="image.jpg" class="lazyload" />
 ```
 
-### TODO
+## TODO
 - [ ] Add modernizr / setup basic fallback classes for IE9
 - [X] Add url-loader / setup local images/font paths
 - [X] Add production build script: on run-script 'build prod', compress images + min assets
+- [ ] Include base icon set
+
+## License
+Copyright (c) 2018 [Brian O'Toole](https://brianzotoole.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
