@@ -495,7 +495,7 @@ img {
     height: 1em;
     font-size: 100px;
     margin: 0 auto;
-    background: url(../img/logo.svg) center center no-repeat;
+    background: url(../../dist/img/logo.svg) center center no-repeat;
     background-size: 100%; }
   .hero__content {
     position: relative;

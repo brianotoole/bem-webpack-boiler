@@ -1,3 +1,4 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: 'dist/js/[name].js',
-    publicPath: '../'
+    publicPath: '../../'
   },
   module: {
     rules: [
@@ -26,11 +27,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/
       },
-      //{ // URL LOADER
-      //  test: /\.(jpe?g|png|svg)(\?[a-z0-9=.]+)?$/,
-       // loader: 'url-loader?limit=10000&name=[name].[ext]', //if < 10 kb, base64 encode img to css
-      //},
-      { // FILE-LOADER
+      { // URL LOADER, IMAGE FILES
+        test: /\.(jpe?g|png|svg)/,
+        loader: 'url-loader?limit=10000&name=dist/img/[name].[ext]', //if < 10 kb, base64 encode img to css
+      },
+      { // URL LOADER, FONTS
+        test: /\.(woff|woff2|eot|ttf)/,
+        loader: 'url-loader?limit=10000&name=dist/fonts/[name].[ext]', //font files to './dist/fonts/**.'
+      },
+      /*{ // FILE-LOADER
         test: /\.woff|woff2|eot|ttf|svg|jpe?g|png/,
         loader: 'file-loader',
         options: {
@@ -39,7 +44,7 @@ module.exports = {
             return url.replace(/dist/, '..')
           },
         },
-      },
+      },*/
     ]
   },
   plugins: [
