@@ -178,6 +178,7 @@ html {
 
 body {
   background: #fff;
+  color: #222;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -282,7 +283,8 @@ p {
   margin-right: -1rem; }
   .row-flex > div {
     position: relative;
-    padding: 0 1rem 1rem; }
+    padding: 0 1rem 1rem;
+    width: 100%; }
   .row-flex--no-gutters {
     margin: 0; }
     .row-flex--no-gutters > div {
@@ -582,6 +584,68 @@ p {
     margin: 0; }
   .hero__btn-container {
     margin-top: 20px; }
+
+/*********************************************************
+    Form
+*********************************************************/
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+label,
+.form > .form__label {
+  display: block;
+  margin-bottom: 0.2rem; }
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #222;
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  border-radius: 0;
+  outline: none;
+  transition: 0.2s all ease-out; }
+  input[type='email']:focus, input[type='email']:active,
+  input[type='number']:focus,
+  input[type='number']:active,
+  input[type='password']:focus,
+  input[type='password']:active,
+  input[type='search']:focus,
+  input[type='search']:active,
+  input[type='tel']:focus,
+  input[type='tel']:active,
+  input[type='text']:focus,
+  input[type='text']:active,
+  input[type='url']:focus,
+  input[type='url']:active,
+  textarea:focus,
+  textarea:active {
+    border-color: #c60813; }
+
+textarea {
+  max-width: 100%; }
+
+@media (min-width: 800px) {
+  .form__btn-container {
+    float: right; } }
+
+.form__input--success {
+  border-color: green !important; }
+
+.form__input--error {
+  border-color: red !important; }
 
 /*********************************************************
     Modal

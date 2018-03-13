@@ -8,10 +8,15 @@
 $color-primary: #c60813;
 $color-secondary: #7c9091;
 $color-white: #ffffff;
+$color-body: #222;
 
 $color-primary-dark: darken($color-primary, 15%);
 $color-secondary-dark: darken($color-secondary, 15%);
 $color-white-dark: darken($color-white, 15%);
+
+$color-border-base: rgba($color-body, 0.2);
+$color-success: green;
+$color-error: red;
 
 /*********************************************************
     Typography
