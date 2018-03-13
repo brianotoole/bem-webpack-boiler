@@ -1,0 +1,36 @@
+/*********************************************************
+    Typography
+*********************************************************/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+h1 {
+  font-size: font-scale(6);
+}
+
+h2 {
+  font-size: font-scale(5);
+}
+
+h3 {
+  font-size: font-scale(4);
+}
+
+h4 {
+  font-size: font-scale(3);
+}
+
+h5 {
+  font-size: font-scale(2);
+}
+
+h6 {
+  font-size: font-scale(0);
+}
+
+p {
+  margin: 0 0 rem(20) 0;
+}
+
