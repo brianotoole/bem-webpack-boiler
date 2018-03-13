@@ -16,13 +16,13 @@
   &--is-fixed {
     @include bp_md {
       position: fixed;
-      background-color: darken($color-primary, 20%);
+      background-color: $color-primary-dark;
     }
   }
 
   &--is-open {
     height: 100vh;
-    background-color: darken($color-primary, 20%);
+    background-color: $color-primary-dark;
     z-index: 20;
   }
 

@@ -7,13 +7,13 @@
   text-decoration: none;
   transition: all 0.2s linear;
   &:hover, &:focus {
-    background-color: darken($color-primary, 10%);
+    background-color: $color-primary-dark;
   }
 
   &--secondary {
     background-color: $color-secondary;
     &:hover, &:focus {
-      background-color: darken($color-secondary, 10%);
+      background-color: $color-secondary-dark;
     }
   }
 
@@ -23,7 +23,7 @@
     border: 2px solid $color-primary;
     &:hover, &:focus {
       background-color: $color-primary;
-      border-color: darken($color-primary, 10%);
+      border-color: $color-primary-dark;
     }
   }
 

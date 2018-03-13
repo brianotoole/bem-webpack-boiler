@@ -203,18 +203,18 @@ img {
   text-decoration: none;
   transition: all 0.2s linear; }
   .btn:hover, .btn:focus {
-    background-color: #95060e; }
+    background-color: #7c050c; }
   .btn--secondary {
     background-color: #7c9091; }
     .btn--secondary:hover, .btn--secondary:focus {
-      background-color: #647676; }
+      background-color: #586869; }
   .btn--transparent {
     color: #ffffff;
     background-color: transparent;
     border: 2px solid #c60813; }
     .btn--transparent:hover, .btn--transparent:focus {
       background-color: #c60813;
-      border-color: #95060e; }
+      border-color: #7c050c; }
   .btn--large {
     padding: 0.9375rem 1.5625rem;
     font-size: 1.125rem; }
@@ -298,10 +298,10 @@ img {
   @media (min-width: 800px) {
     .header--is-fixed {
       position: fixed;
-      background-color: #64040a; } }
+      background-color: #7c050c; } }
   .header--is-open {
     height: 100vh;
-    background-color: #64040a;
+    background-color: #7c050c;
     z-index: 20; }
   @media (min-width: 800px) {
     .header__btn-container {
