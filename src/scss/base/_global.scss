@@ -1,26 +1,28 @@
-/**
-  * GLOBAL PAGE STYLES
-  */
+/*********************************************************
+    Global Page Rules
+*********************************************************/
 * {
   box-sizing: border-box;
 }
+
 html {
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
 }
+
 body {
   background: #fff;
   font-family: $font-body;
-  font-size: 100%;
+  font-size: $font-base-font-size;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: $font-base-line-height;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-heading;
-}
+
 img {
   width: 100%;
   height: auto;
 }
+
 .wrapper {
   max-width: 1230px;
   margin-left: auto;

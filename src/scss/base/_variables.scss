@@ -1,7 +1,10 @@
-/**
-  * VARIABLES
-  */
+/*********************************************************
+    Variables
+*********************************************************/
 
+/*********************************************************
+    Colors
+*********************************************************/
 $color-primary: #c60813;
 $color-secondary: #7c9091;
 $color-white: #ffffff;
@@ -10,5 +13,25 @@ $color-primary-dark: darken($color-primary, 15%);
 $color-secondary-dark: darken($color-secondary, 15%);
 $color-white-dark: darken($color-white, 15%);
 
+/*********************************************************
+    Typography
+*********************************************************/
+$font-base-font-size: 1rem;
+$font-ratio: 1.2;
+$font-base-line-height: 1.5;
+
 $font-heading: 'Roboto', sans-serif;
 $font-body: 'Lato', sans-serif;
+
+/*********************************************************
+    Layout
+*********************************************************/
+$wrapper-width: 960px;
+$wrapper-padding: 2rem;
+
+/*********************************************************
+    Responsive
+*********************************************************/
+$bp_sm: 530px;
+$bp_md: 800px;
+$bp_lg: 999px;

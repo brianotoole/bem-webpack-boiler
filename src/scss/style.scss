@@ -1,20 +1,21 @@
-/**
-  * MAIN STYLES ENTRY POINT
-  */
+/*********************************************************
+    Main Styles Entry Point
+*********************************************************/
 
-/* Base */
+// Base
 @import "base/reset";
 @import "base/variables";
 @import "base/mixins";
 @import "base/fonts";
 @import "base/global";
+@import "base/typography";
 
-/* Layouts */
+// Layouts 
 @import "layouts/buttons";
 @import "layouts/grid";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/hero";
 
-/* Modules */
+// Modules 
 @import "modules/modal";

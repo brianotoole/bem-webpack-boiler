@@ -2,6 +2,31 @@
   * MIXINS
   */
 
+@function power($number, $power) {
+    $exponent: 1;
+
+    @if $power > 0 {
+        @for $i from 1 through $power {
+            $exponent: $exponent * $number;
+        }
+    } @else {
+        @for $i from $power to 0 {
+            $exponent: $exponent / $number;
+        }
+    }
+
+    @return $exponent;
+}
+
+/**
+  * MIXINS
+  * USAGE:
+  font-size: font-scale(3);
+  */
+@function font-scale($x) {  
+  @return power($font-ratio, $x) * $font-base-font-size;
+};
+
 
 /**
   * MEDIA QUERIES MIXIN
@@ -12,10 +37,6 @@
       width: 500px;
     }
   */
-
-$bp_sm: 530px;
-$bp_md: 800px;
-$bp_lg: 999px;
 
 // above bp_sm
 @mixin bp_sm {
