@@ -17,12 +17,12 @@ cd bem-webpack-boiler
 ``` bash
 npm install
 ```
-3. Change proxy location for BrowserSync
-Open `webpack.config.js` file and change the proxy location for BrowserSync to work. On ~line 36:
+3. *Optional:* Change proxy location for BrowserSync
+If you'd like to change the name of your site's folder, open `webpack.config.js` file and change the proxy location for BrowserSync to work. On ~line 36:
 
 Change proxy location: "localhost/bem-webpack-boiler"
 ``` bash
-proxy: 'localhost/FOLDERNAME', 
+proxy: 'localhost/Your-New-Site-Name', 
 ```
 
 4. Start server
@@ -34,6 +34,11 @@ npm run-script watch
 
 This will open up a browser window with local site and watch for file changes. Ex - http://localhost:3000/bem-webpack-boiler
 
+### Build files for production
+When you're ready to minify production files, run the following in the site's root:
+`npm run-script prod`
+
+This will run webpack's production build flag, `-p` to minify bundled files.
 
 ### Local Images and Fonts
 Webpack needs a few loaders installed to use local images/fonts within the project's directory. This boilerplate uses `url-loader` to bundle/load images. Url-loader has the ability to load files as base64 encoded DataURL if the file is smaller than a specificied byte limit. This helps reduce the number of requests made. 
@@ -68,12 +73,6 @@ To use the image within a stylesheet, use the relative path from the main entryp
 
 ##### File-loader fallback
 If for some reason url-loader isn't your preferred loader, file-loader is installed and setup within webpack.config.js. To use, uncomment the `file-loader` within `webpack.config.js` and comment-out or remove the url-loader instance.
-
-### Build files for production
-When you're ready to minify production files, run the following in the site's root:
-`npm run-script prod`
-
-This will run webpack's production build flag, `-p` to minify bundled files.
 
 ### Packages Included
 1. [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
