@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 500px;
+  height: 550px;
   //background: url('../img/bg-brick.png') 0 0 repeat;
 
   &--has-overlay {
@@ -35,14 +35,17 @@
   }
 
   &__content {
-    position: absolute;
-    top: 55%;
-    transform: translateY(-55%);
+    position: relative;
+    top: 60%;
+    transform: translateY(-60%);
     left: 0;
-    width: 100%;
     text-align: center;
     color: $color-white;
     z-index: 10;
+    @include bp_md {
+      margin: 0 auto;
+      max-width: 65%;
+    }
   }
 
   &__title {
@@ -51,17 +54,13 @@
     color: $color-white;
     margin-bottom: 10px;
     @include bp_md {
-      font-size: rem(60);
+      font-size: rem(58);
     }
   }
 
   &__subtitle {
     font-weight: 100;
-    font-size: rem(20);
     margin: 0;
-    @include bp_md {
-      font-size: rem(30);
-    }
   }
 
   &__btn-container {

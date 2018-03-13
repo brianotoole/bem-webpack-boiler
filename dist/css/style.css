@@ -475,7 +475,7 @@ img {
 
 .hero {
   position: relative;
-  height: 500px; }
+  height: 550px; }
   .hero--has-overlay:after {
     content: '';
     position: absolute;
@@ -498,15 +498,18 @@ img {
     background: url(../img/logo.svg) center center no-repeat;
     background-size: 100%; }
   .hero__content {
-    position: absolute;
-    top: 55%;
-    -webkit-transform: translateY(-55%);
-            transform: translateY(-55%);
+    position: relative;
+    top: 60%;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
     left: 0;
-    width: 100%;
     text-align: center;
     color: #ffffff;
     z-index: 10; }
+    @media (min-width: 800px) {
+      .hero__content {
+        margin: 0 auto;
+        max-width: 65%; } }
   .hero__title {
     font-weight: 300;
     font-size: 30px;
@@ -514,14 +517,10 @@ img {
     margin-bottom: 10px; }
     @media (min-width: 800px) {
       .hero__title {
-        font-size: 3.75rem; } }
+        font-size: 3.625rem; } }
   .hero__subtitle {
     font-weight: 100;
-    font-size: 1.25rem;
     margin: 0; }
-    @media (min-width: 800px) {
-      .hero__subtitle {
-        font-size: 1.875rem; } }
   .hero__btn-container {
     margin-top: 20px; }
 
