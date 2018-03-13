@@ -28,10 +28,10 @@ Webpack needs a few loaders installed to use local images/fonts within the proje
 
 
 ##### URL-Loader webpack setup
-The default specificed byte limit to serve DataURL's on images is 10KB, or 10,000 bytes. There are 2 separate url-loader options to test for. 
+The default specificed byte limit on this boilerplate to serve DataURL's on images is 10KB, or 10,000 bytes. There are 2 separate url-loader options to test for. 
 
 1. Test for image files
-The first, is for image files -- or, any file that ends in `.jpg/.jpeg/.png/.svg`, which looks like this within the `webpack.config.js` file:
+This is testing for files with `.jpg/.jpeg/.png/.svg` extention types. If the file is less than 10KB, serve this as a DataURL. If greater than 10KB, bundle to the path within `&name`. Or, `./dist/img/[name].[ext]`.
 
 ``` javascript
 { // URL LOADER, IMAGE FILES
@@ -39,8 +39,6 @@ The first, is for image files -- or, any file that ends in `.jpg/.jpeg/.png/.svg
   loader: 'url-loader?limit=10000&name=dist/img/[name].[ext]', //if < 10 kb, base64 encode img to css
 },
 ```
-
-This is testing for files with `.jpg/.jpeg/.png/.svg` extention types. If the file is less than 10KB, serve this as a DataURL. If greater than 10KB, bundle to the path within `&name`. Or, `./dist/img/[name].[ext]`.
 
 2. Test for font files
 ``` javascript
