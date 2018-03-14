@@ -1,6 +1,6 @@
-/**
-  * MIXINS
-  */
+/*********************************************************
+    Mixins
+*********************************************************/
 
 @function power($number, $power) {
     $exponent: 1;
@@ -18,25 +18,24 @@
     @return $exponent;
 }
 
-/**
-  * MIXINS
-  * USAGE:
-  font-size: font-scale(3);
-  */
+/*********************************************************
+    Font Scale
+    Usage: font-size: font-scale(3)
+*********************************************************/
 @function font-scale($x) {  
   @return power($font-ratio, $x) * $font-base-font-size;
 };
 
 
-/**
-  * MEDIA QUERIES MIXIN
-  * MOBILE FIRST APPROACH
-  * DEFAULT RULES SET FOR MOBILE
-  * USAGE: 
+/*********************************************************
+    Media Query Breakpoints
+    Mobile first approach
+    Default rules are set below sm-sized screens
+    Usage:
     @include bp_md {
-      width: 500px;
+      width: 50%;
     }
-  */
+*********************************************************/
 
 // above bp_sm
 @mixin bp_sm {
@@ -59,11 +58,11 @@
   }
 }
 
-/**
-  * PX TO REM CONVERSION
-  * USAGE:
-  * .class {font-size: rem(20)};
-  */
+
+/*********************************************************
+    Px to Rem Conversion
+    Usage: .class {font-size: rem(18)}
+*********************************************************/
 $baseFontSize : 16; 
 @function rem($pixels, $context: $baseFontSize) {
   @if (unitless($pixels)) {
@@ -75,26 +74,26 @@ $baseFontSize : 16;
   @return $pixels / $context * 1rem;
 }
 
-/**
-  * CLEARFIX
-  * USAGE:
-  * @include clearFix();
-  */
+
+/*********************************************************
+    Clearfix
+    Usage: @include clearFix()
+*********************************************************/
 @mixin clearFix() {
   &:before,
-  &:after{
+  &:after {
     content: " "; 
     display: table; 
   }
 
-  &:after{
+  &:after {
     display: block;
     clear: both;
     height: 1px;
     margin-top: -1px;
     visibility: hidden;
   }
-  &{
+  & {
     *zoom: 1;
   }
 }

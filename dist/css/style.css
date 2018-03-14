@@ -59,38 +59,32 @@ h1, h2, h3, h4, h5, h6 {
     Typography
 *********************************************************/
 /*********************************************************
-    Layout
+    Responsive Breakpoints
 *********************************************************/
 /*********************************************************
-    Responsive
+    Mixins
 *********************************************************/
-/**
-  * MIXINS
-  */
-/**
-  * MIXINS
-  * USAGE:
-  font-size: font-scale(3);
-  */
-/**
-  * MEDIA QUERIES MIXIN
-  * MOBILE FIRST APPROACH
-  * DEFAULT RULES SET FOR MOBILE
-  * USAGE: 
+/*********************************************************
+    Font Scale
+    Usage: font-size: font-scale(3)
+*********************************************************/
+/*********************************************************
+    Media Query Breakpoints
+    Mobile first approach
+    Default rules are set below sm-sized screens
+    Usage:
     @include bp_md {
-      width: 500px;
+      width: 50%;
     }
-  */
-/**
-  * PX TO REM CONVERSION
-  * USAGE:
-  * .class {font-size: rem(20)};
-  */
-/**
-  * CLEARFIX
-  * USAGE:
-  * @include clearFix();
-  */
+*********************************************************/
+/*********************************************************
+    Px to Rem Conversion
+    Usage: .class {font-size: rem(18)}
+*********************************************************/
+/*********************************************************
+    Clearfix
+    Usage: @include clearFix()
+*********************************************************/
 /*********************************************************
     Fonts
 *********************************************************/
@@ -188,6 +182,13 @@ img {
   width: 100%;
   height: auto; }
 
+a {
+  text-decoration: none;
+  color: #c60813;
+  transition: 0.2s color ease-out; }
+  a:hover {
+    color: #7c050c; }
+
 .wrapper {
   max-width: 1230px;
   margin-left: auto;
@@ -247,13 +248,17 @@ p {
 *********************************************************/
 .btn {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: .6rem 1.2rem;
   font-size: 1rem;
   color: #ffffff;
   background-color: #c60813;
+  border-radius: .2rem;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s linear; }
   .btn:hover, .btn:focus {
+    text-decoration: none;
+    color: #ffffff;
     background-color: #7c050c; }
   .btn--secondary {
     background-color: #7c9091; }
@@ -269,28 +274,40 @@ p {
   .btn--large {
     padding: 0.9375rem 1.5625rem;
     font-size: 1.125rem; }
+  .btn--disabled {
+    opacity: 0.8;
+    cursor: not-allowed; }
 
 /*********************************************************
     Flexbox Grid
 *********************************************************/
 .row-flex {
   display: flex;
-  width: auto;
   flex-direction: row;
   flex-wrap: wrap;
   flex: 0 1 auto;
-  margin-left: -1rem;
-  margin-right: -1rem; }
+  margin-left: -0.5rem;
+  margin-right: -0.5rem; }
   .row-flex > div {
     position: relative;
-    padding: 0 1rem 1rem;
+    padding: 0 1rem;
     width: 100%; }
   .row-flex--no-gutters {
     margin: 0; }
     .row-flex--no-gutters > div {
       padding: 0; }
+  .row-flex--lg-gutters {
+    margin-left: -2rem;
+    margin-right: -2rem; }
+    .row-flex--lg-gutters > div {
+      padding: 0 2rem; }
   .row-flex--reverse {
     flex-direction: row-reverse; }
+  .row-flex--center {
+    justify-content: center;
+    text-align: center; }
+  .row-flex--space-between {
+    justify-content: space-between; }
   @media (min-width: 800px) {
     .row-flex__md-1 {
       flex-basis: 8.3333333333%;

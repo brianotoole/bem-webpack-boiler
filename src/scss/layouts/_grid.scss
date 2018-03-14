@@ -1,18 +1,19 @@
 /*********************************************************
     Flexbox Grid
 *********************************************************/
+$wrapper-padding: 1rem;
+
 .row-flex {
   display: flex;
-  width: auto;
   flex-direction: row;
   flex-wrap: wrap;
   flex: 0 1 auto;
-  margin-left: -($wrapper-padding/2);
-  margin-right: -($wrapper-padding/2);
+  margin-left: -($wrapper-padding / 2);
+  margin-right: -($wrapper-padding / 2);
 
-  > div { //default grid has padding applied
+  > div { //default grid has padding applied 
     position: relative;
-    padding: 0 1rem 1rem;
+    padding: 0 $wrapper-padding;
     width: 100%;
   }
 
@@ -23,8 +24,25 @@
     }
   }
 
+  &--lg-gutters {
+    margin-left: -($wrapper-padding * 2);
+    margin-right: -($wrapper-padding * 2);
+    > div {
+      padding: 0 ($wrapper-padding * 2);
+    }
+  }
+
   &--reverse {
     flex-direction: row-reverse;
+  }
+
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--space-between {
+    justify-content: space-between;
   }
 
   @include bp_md {

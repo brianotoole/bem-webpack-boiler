@@ -24,6 +24,15 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: $color-primary;
+  transition: 0.2s color ease-out;
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
 .wrapper {
   max-width: 1230px;
   margin-left: auto;
