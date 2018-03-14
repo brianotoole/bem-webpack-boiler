@@ -3,11 +3,11 @@
 *********************************************************/
 .btn {
   display: inline-block;
-  padding: .6rem 1.2rem;
+  padding: rem(8) rem(10);
   font-size: font-scale(0);
   color: $color-white;
   background-color: $color-primary;
-  border-radius: .2rem;
+  border-radius: rem(2);
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s linear;

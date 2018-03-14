@@ -23,8 +23,8 @@ input[type='url'],
 textarea, {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1.5rem;
-  padding: 1rem 1.3rem;
+  margin-bottom: rem(18);
+  padding: rem(16) rem(18);
   font-family: inherit;
   font-size: 1rem;
   color: $color-body;

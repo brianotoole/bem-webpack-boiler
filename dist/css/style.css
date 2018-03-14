@@ -248,11 +248,11 @@ p {
 *********************************************************/
 .btn {
   display: inline-block;
-  padding: .6rem 1.2rem;
+  padding: 0.5rem 0.625rem;
   font-size: 1rem;
   color: #ffffff;
   background-color: #c60813;
-  border-radius: .2rem;
+  border-radius: 0.125rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s linear; }
@@ -625,8 +625,8 @@ input[type='url'],
 textarea {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1.5rem;
-  padding: 1rem 1.3rem;
+  margin-bottom: 1.125rem;
+  padding: 1rem 1.125rem;
   font-family: inherit;
   font-size: 1rem;
   color: #222;
