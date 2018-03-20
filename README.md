@@ -2,7 +2,7 @@
 A minimalistic boilerplate that follows BEM methodology and organizes assets using an SMACSS approach. It comes with Webpack that includes BrowserSync for auto reloading / proxing a server, Babel for writing ES6-based javascript modules, Autoprefixer for cross-browser compatibility, and uses SCSS as the main loader for styles.
 
 ## Requirements
-To use everything site-start ships with, you must have the following installed:
+To use everything this boilerplate ships with, you need the following installed on your machine:
 
 * NPM
 
@@ -70,7 +70,7 @@ This is testing for files with `.woff/.woff2/.eot/.ttf` extention types. If the 
 Add images within the `./src/img/` folder.
 To use the image within a stylesheet, use the relative path from the main entrypoint file, `./src/index.js`. An example:
 ``` css
-.has--bg { background: url('../img/bg-brick.png') 0 0 repeat; }
+.--has-bg { background: url('../img/bg-brick.png') 0 0 repeat; }
 ```
 
 ##### File-loader fallback
