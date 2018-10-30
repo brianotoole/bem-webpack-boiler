@@ -21,14 +21,13 @@ input[type='search'],
 input[type='tel'],
 input[type='text'],
 input[type='url'],
-textarea,
-{
+textarea {
     display: inline-block;
     width: 100%;
+    height: rem(45);
+    line-height: rem(45);
     margin-bottom: rem(18);
     padding: 0 rem(10);
-    height: 3rem;
-    line-height: 3rem;
     font-family: inherit;
     font-size: 1rem;
     color: $color-body;
@@ -74,7 +73,20 @@ textarea {
         display: inline-block;
     }
     input {
-        flex: 1;
         width: auto;
+    }
+}
+
+// Form inline placehoders
+.form-inline-placeholders {
+    .form-group input:focus {
+        position: relative;
+        background: white;
+    }
+    .form-group label {
+        position: absolute;
+        line-height: 3rem;
+        padding-left: rem(10);
+        pointer-events: none; //allows click into
     }
 }
