@@ -254,7 +254,7 @@ p {
   font-size: 1rem;
   color: #ffffff;
   background-color: #c60813;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   border: 1px solid #c60813;
   text-decoration: none;
   text-align: center;
@@ -283,6 +283,11 @@ p {
   .btn--disabled {
     opacity: 0.8;
     cursor: not-allowed; }
+  .btn--block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; }
 
 /*********************************************************
     Flexbox Grid
@@ -640,6 +645,7 @@ textarea {
   color: #222;
   border: 1px solid rgba(34, 34, 34, 0.2);
   border-radius: 0;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   outline: none;
   transition: 0.2s all ease-out; }
   input[type='email']:focus, input[type='email']:active,
@@ -690,6 +696,14 @@ textarea {
   line-height: 3rem;
   padding-left: 0.625rem;
   pointer-events: none; }
+
+.field-search {
+  display: flex;
+  justify-content: flex-start; }
+  .field-search .btn {
+    margin-left: -2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
 /*********************************************************
     Modal

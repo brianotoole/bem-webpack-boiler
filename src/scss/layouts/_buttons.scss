@@ -10,7 +10,7 @@
     font-size: font-scale(0);
     color: $color-white;
     background-color: $color-primary;
-    border-radius: rem(2);
+    border-radius: rem(4);
     border: 1px solid $color-primary;
     text-decoration: none;
     text-align: center;
@@ -48,5 +48,11 @@
     &--disabled {
         opacity: 0.8;
         cursor: not-allowed;
+    }
+    &--block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
     }
 }
