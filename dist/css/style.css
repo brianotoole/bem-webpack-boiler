@@ -632,7 +632,9 @@ textarea {
   display: inline-block;
   width: 100%;
   margin-bottom: 1.125rem;
-  padding: 1rem 1.125rem;
+  padding: 0 0.625rem;
+  height: 3rem;
+  line-height: 3rem;
   font-family: inherit;
   font-size: 1rem;
   color: #222;
@@ -669,6 +671,16 @@ textarea {
 
 .form__input--error {
   border-color: red !important; }
+
+.form-inline {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle; }
+  .form-inline .form-group {
+    display: inline-block; }
+  .form-inline input {
+    flex: 1;
+    width: auto; }
 
 /*********************************************************
     Modal
