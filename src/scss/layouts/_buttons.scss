@@ -3,12 +3,17 @@
 *********************************************************/
 .btn {
   display: inline-block;
-  padding: rem(8) rem(10);
+  padding: 0 rem(10);
+  height: 3rem;
+  line-height: 3rem;
   font-size: font-scale(0);
   color: $color-white;
   background-color: $color-primary;
   border-radius: rem(2);
+  border: 1px solid $color-primary;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s linear;
   &:hover, &:focus {
@@ -19,15 +24,16 @@
 
   &--secondary {
     background-color: $color-secondary;
+    border-color: $color-secondary;
     &:hover, &:focus {
       background-color: $color-secondary-dark;
     }
   }
 
-  &--transparent {
-    color: $color-white;
+  &--muted {
+    color: $color-primary;
     background-color: transparent;
-    border: 2px solid $color-primary;
+    border-color: $color-primary;
     &:hover, &:focus {
       background-color: $color-primary;
       border-color: $color-primary-dark;

@@ -248,12 +248,17 @@ p {
 *********************************************************/
 .btn {
   display: inline-block;
-  padding: 0.5rem 0.625rem;
+  padding: 0 0.625rem;
+  height: 3rem;
+  line-height: 3rem;
   font-size: 1rem;
   color: #ffffff;
   background-color: #c60813;
   border-radius: 0.125rem;
+  border: 1px solid #c60813;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s linear; }
   .btn:hover, .btn:focus {
@@ -261,14 +266,15 @@ p {
     color: #ffffff;
     background-color: #7c050c; }
   .btn--secondary {
-    background-color: #7c9091; }
+    background-color: #7c9091;
+    border-color: #7c9091; }
     .btn--secondary:hover, .btn--secondary:focus {
       background-color: #586869; }
-  .btn--transparent {
-    color: #ffffff;
+  .btn--muted {
+    color: #c60813;
     background-color: transparent;
-    border: 2px solid #c60813; }
-    .btn--transparent:hover, .btn--transparent:focus {
+    border-color: #c60813; }
+    .btn--muted:hover, .btn--muted:focus {
       background-color: #c60813;
       border-color: #7c050c; }
   .btn--large {
